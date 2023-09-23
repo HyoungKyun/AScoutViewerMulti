@@ -1,0 +1,15 @@
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.csproj.AssemblyReference.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.csproj.SuggestedBindingRedirects.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A_Scout_Viewer.Form1.resources
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A_Scout_Viewer.Properties.Resources.resources
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.csproj.GenerateResource.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.csproj.CoreCompileInputs.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\Debug\A-Scout Viewer.exe.config
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\Debug\A-Scout Viewer.exe
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\Debug\A-Scout Viewer.pdb
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\Debug\MetroFramework.Design.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\Debug\MetroFramework.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\Debug\MetroFramework.Fonts.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.csproj.CopyComplete
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.exe
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.pdb

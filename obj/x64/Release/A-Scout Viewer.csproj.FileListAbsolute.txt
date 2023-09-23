@@ -1,0 +1,31 @@
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\OpenCvSharpExtern.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\A-Scout Viewer.exe.config
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\A-Scout Viewer.exe
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\A-Scout Viewer.pdb
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\MetroFramework.Design.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\MetroFramework.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\MetroFramework.Fonts.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\MvCamCtrl.Net.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\OpenCvSharp.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\OpenCvSharp.Extensions.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Buffers.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Drawing.Common.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Memory.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Numerics.Vectors.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\MvCamCtrl.Net.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\OpenCvSharp.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\OpenCvSharp.Extensions.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Buffers.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Memory.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Numerics.Vectors.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A-Scout Viewer.csproj.AssemblyReference.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A-Scout Viewer.csproj.SuggestedBindingRedirects.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A_Scout_Viewer.A_Scout.resources
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A_Scout_Viewer.Properties.Resources.resources
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A-Scout Viewer.csproj.GenerateResource.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A-Scout Viewer.csproj.CoreCompileInputs.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A-Scout Viewer.csproj.CopyComplete
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A-Scout Viewer.exe
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\x64\Release\A-Scout Viewer.pdb
