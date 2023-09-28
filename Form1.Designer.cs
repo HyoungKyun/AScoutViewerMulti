@@ -54,14 +54,25 @@ namespace A_Scout_Viewer
             this.htmlLabel1 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.lbFPS = new MetroFramework.Drawing.Html.HtmlLabel();
             this.btFilePlay = new MetroFramework.Controls.MetroButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroCBCam3 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCBCam2 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCBCam1 = new MetroFramework.Controls.MetroCheckBox();
+            this.lbFPS2 = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.lbFPS3 = new MetroFramework.Drawing.Html.HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btPreview
             // 
             this.btPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btPreview.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btPreview.Location = new System.Drawing.Point(21, 302);
+            this.btPreview.Location = new System.Drawing.Point(21, 472);
             this.btPreview.Name = "btPreview";
             this.btPreview.Size = new System.Drawing.Size(180, 45);
             this.btPreview.TabIndex = 0;
@@ -73,7 +84,7 @@ namespace A_Scout_Viewer
             // 
             this.btStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btStop.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btStop.Location = new System.Drawing.Point(21, 401);
+            this.btStop.Location = new System.Drawing.Point(21, 542);
             this.btStop.Name = "btStop";
             this.btStop.Size = new System.Drawing.Size(180, 45);
             this.btStop.TabIndex = 2;
@@ -85,7 +96,7 @@ namespace A_Scout_Viewer
             // 
             this.btCapture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btCapture.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btCapture.Location = new System.Drawing.Point(21, 500);
+            this.btCapture.Location = new System.Drawing.Point(21, 612);
             this.btCapture.Name = "btCapture";
             this.btCapture.Size = new System.Drawing.Size(180, 45);
             this.btCapture.TabIndex = 3;
@@ -97,7 +108,7 @@ namespace A_Scout_Viewer
             // 
             this.btPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btPlay.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btPlay.Location = new System.Drawing.Point(21, 682);
+            this.btPlay.Location = new System.Drawing.Point(21, 736);
             this.btPlay.Name = "btPlay";
             this.btPlay.Size = new System.Drawing.Size(180, 45);
             this.btPlay.TabIndex = 4;
@@ -109,7 +120,7 @@ namespace A_Scout_Viewer
             // 
             this.btSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btSave.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btSave.Location = new System.Drawing.Point(21, 781);
+            this.btSave.Location = new System.Drawing.Point(21, 806);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(180, 45);
             this.btSave.TabIndex = 5;
@@ -151,7 +162,7 @@ namespace A_Scout_Viewer
             "PlaySpeed  1/2 x",
             "PlaySpeed  1/3 x",
             "PlaySpeed  1/4 x"});
-            this.cbPlaySpeed.Location = new System.Drawing.Point(21, 599);
+            this.cbPlaySpeed.Location = new System.Drawing.Point(21, 682);
             this.cbPlaySpeed.Name = "cbPlaySpeed";
             this.cbPlaySpeed.Size = new System.Drawing.Size(180, 29);
             this.cbPlaySpeed.TabIndex = 7;
@@ -263,7 +274,7 @@ namespace A_Scout_Viewer
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(225, 128);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1200, 825);
+            this.pictureBox1.Size = new System.Drawing.Size(600, 412);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -295,27 +306,122 @@ namespace A_Scout_Viewer
             // lbFPS
             // 
             this.lbFPS.AutoScroll = true;
-            this.lbFPS.AutoScrollMinSize = new System.Drawing.Size(104, 53);
+            this.lbFPS.AutoScrollMinSize = new System.Drawing.Size(207, 53);
             this.lbFPS.AutoSize = false;
             this.lbFPS.BackColor = System.Drawing.SystemColors.Window;
             this.lbFPS.Font = new System.Drawing.Font("Arial Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbFPS.Location = new System.Drawing.Point(1452, 903);
+            this.lbFPS.Location = new System.Drawing.Point(1452, 767);
             this.lbFPS.Name = "lbFPS";
             this.lbFPS.Size = new System.Drawing.Size(408, 50);
             this.lbFPS.TabIndex = 14;
-            this.lbFPS.Text = "FPS : ";
+            this.lbFPS.Text = "Cam1 FPS : ";
             // 
             // btFilePlay
             // 
             this.btFilePlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btFilePlay.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btFilePlay.Location = new System.Drawing.Point(21, 880);
+            this.btFilePlay.Location = new System.Drawing.Point(21, 876);
             this.btFilePlay.Name = "btFilePlay";
             this.btFilePlay.Size = new System.Drawing.Size(180, 45);
             this.btFilePlay.TabIndex = 17;
             this.btFilePlay.Text = "File Open";
             this.btFilePlay.UseSelectable = true;
             this.btFilePlay.Click += new System.EventHandler(this.btFilePlay_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(831, 128);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(600, 412);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Location = new System.Drawing.Point(225, 546);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(600, 412);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.metroCBCam3);
+            this.groupBox1.Controls.Add(this.metroCBCam2);
+            this.groupBox1.Controls.Add(this.metroCBCam1);
+            this.groupBox1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Location = new System.Drawing.Point(13, 268);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(196, 183);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Camera List";
+            // 
+            // metroCBCam3
+            // 
+            this.metroCBCam3.AutoSize = true;
+            this.metroCBCam3.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.metroCBCam3.Location = new System.Drawing.Point(28, 132);
+            this.metroCBCam3.Name = "metroCBCam3";
+            this.metroCBCam3.Size = new System.Drawing.Size(103, 25);
+            this.metroCBCam3.TabIndex = 2;
+            this.metroCBCam3.Text = "Camera 3";
+            this.metroCBCam3.UseSelectable = true;
+            this.metroCBCam3.CheckedChanged += new System.EventHandler(this.metroCBCam3_CheckedChanged);
+            // 
+            // metroCBCam2
+            // 
+            this.metroCBCam2.AutoSize = true;
+            this.metroCBCam2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.metroCBCam2.Location = new System.Drawing.Point(28, 88);
+            this.metroCBCam2.Name = "metroCBCam2";
+            this.metroCBCam2.Size = new System.Drawing.Size(103, 25);
+            this.metroCBCam2.TabIndex = 1;
+            this.metroCBCam2.Text = "Camera 2";
+            this.metroCBCam2.UseSelectable = true;
+            this.metroCBCam2.CheckedChanged += new System.EventHandler(this.metroCBCam2_CheckedChanged);
+            // 
+            // metroCBCam1
+            // 
+            this.metroCBCam1.AutoSize = true;
+            this.metroCBCam1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.metroCBCam1.Location = new System.Drawing.Point(28, 44);
+            this.metroCBCam1.Name = "metroCBCam1";
+            this.metroCBCam1.Size = new System.Drawing.Size(103, 25);
+            this.metroCBCam1.TabIndex = 0;
+            this.metroCBCam1.Text = "Camera 1";
+            this.metroCBCam1.UseSelectable = true;
+            this.metroCBCam1.CheckedChanged += new System.EventHandler(this.metroCBCam1_CheckedChanged);
+            // 
+            // lbFPS2
+            // 
+            this.lbFPS2.AutoScroll = true;
+            this.lbFPS2.AutoScrollMinSize = new System.Drawing.Size(207, 53);
+            this.lbFPS2.AutoSize = false;
+            this.lbFPS2.BackColor = System.Drawing.SystemColors.Window;
+            this.lbFPS2.Font = new System.Drawing.Font("Arial Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbFPS2.Location = new System.Drawing.Point(1452, 846);
+            this.lbFPS2.Name = "lbFPS2";
+            this.lbFPS2.Size = new System.Drawing.Size(408, 50);
+            this.lbFPS2.TabIndex = 15;
+            this.lbFPS2.Text = "Cam2 FPS : ";
+            // 
+            // lbFPS3
+            // 
+            this.lbFPS3.AutoScroll = true;
+            this.lbFPS3.AutoScrollMinSize = new System.Drawing.Size(207, 53);
+            this.lbFPS3.AutoSize = false;
+            this.lbFPS3.BackColor = System.Drawing.SystemColors.Window;
+            this.lbFPS3.Font = new System.Drawing.Font("Arial Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbFPS3.Location = new System.Drawing.Point(1452, 925);
+            this.lbFPS3.Name = "lbFPS3";
+            this.lbFPS3.Size = new System.Drawing.Size(408, 50);
+            this.lbFPS3.TabIndex = 16;
+            this.lbFPS3.Text = "Cam3 FPS : ";
             // 
             // A_Scout
             // 
@@ -324,6 +430,11 @@ namespace A_Scout_Viewer
             this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1900, 1040);
+            this.Controls.Add(this.lbFPS3);
+            this.Controls.Add(this.lbFPS2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btFilePlay);
             this.Controls.Add(this.lbFPS);
             this.Controls.Add(this.tgFocusMode);
@@ -352,6 +463,10 @@ namespace A_Scout_Viewer
             this.Text = "A-Scout Viewer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.A_Scout_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,6 +495,14 @@ namespace A_Scout_Viewer
         private MetroFramework.Drawing.Html.HtmlLabel htmlLabel1;
         private MetroFramework.Drawing.Html.HtmlLabel lbFPS;
         private MetroFramework.Controls.MetroButton btFilePlay;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private GroupBox groupBox1;
+        private MetroFramework.Controls.MetroCheckBox metroCBCam2;
+        private MetroFramework.Controls.MetroCheckBox metroCBCam1;
+        private MetroFramework.Controls.MetroCheckBox metroCBCam3;
+        private MetroFramework.Drawing.Html.HtmlLabel lbFPS2;
+        private MetroFramework.Drawing.Html.HtmlLabel lbFPS3;
     }
 }
 

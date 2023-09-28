@@ -13,3 +13,37 @@ D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\bin\Debug\MetroFram
 D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.csproj.CopyComplete
 D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.exe
 D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer\obj\Debug\A-Scout Viewer.pdb
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\dll\x86\OpenCvSharpExtern.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\dll\x86\opencv_videoio_ffmpeg480.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\dll\x64\OpenCvSharpExtern.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\dll\x64\opencv_videoio_ffmpeg480_64.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\A-Scout Viewer.exe.config
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\A-Scout Viewer.exe
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\A-Scout Viewer.pdb
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\MetroFramework.Design.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\MetroFramework.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\MetroFramework.Fonts.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\MvCamCtrl.Net.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\OpenCvSharp.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\OpenCvSharp.Extensions.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Buffers.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Drawing.Common.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Memory.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Numerics.Vectors.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\MvCamCtrl.Net.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\OpenCvSharp.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\OpenCvSharp.Extensions.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Buffers.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Drawing.Common.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Memory.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Numerics.Vectors.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A-Scout Viewer.csproj.AssemblyReference.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A_Scout_Viewer.A_Scout.resources
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A_Scout_Viewer.Properties.Resources.resources
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A-Scout Viewer.csproj.GenerateResource.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A-Scout Viewer.csproj.CoreCompileInputs.cache
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A-Scout Viewer.csproj.CopyComplete
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A-Scout Viewer.exe
+D:\AIVIWORKS\Project\SwingView\Source\A-Scout\A-Scout Viewer_code_multi\obj\Debug\A-Scout Viewer.pdb
