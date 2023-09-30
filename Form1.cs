@@ -146,6 +146,7 @@ namespace A_Scout_Viewer
         private OpenFileDialog openFileDialog = null;
 
         private MetroCheckBox[] CameraArray;
+        private int m_EnalbeCamCount = 0;
 
         private static cbOutputExdelegate Cam1Callback;
         static void Cam1CallbackFunc(IntPtr pData, ref MV_FRAME_OUT_INFO_EX pFrameInfo, IntPtr pUser)
@@ -1094,7 +1095,7 @@ namespace A_Scout_Viewer
                             if (m_MyCamera3 != null)
                             {
                                 m_MyCamera3.StopGrabbing();
-                                m_Cam2State = STATE_VAL.CAM_OPENED;
+                                m_Cam3State = STATE_VAL.CAM_OPENED;
                                 TileState.Invoke(new Action(() =>
                                 {
                                     lbFPS3.Text = "Cam3 FPS : ";
@@ -1565,8 +1566,6 @@ namespace A_Scout_Viewer
 
             if ((CameraArray[0].Checked == true) && ((m_Cam1State == STATE_VAL.CAM_OPENED)|| (m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE) || (m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE2)))
             {
-                CameraArray[0].Enabled = false;
-
                 ReleaseImageBuffer1();
                 tbPlay.Value = 0;
                 //MakeLUT();
@@ -1596,7 +1595,6 @@ namespace A_Scout_Viewer
 
             if ((CameraArray[1].Checked == true) && ((m_Cam2State == STATE_VAL.CAM_OPENED) || (m_Cam2State == STATE_VAL.CAM_FILE_PLAY_PAUSE) || (m_Cam2State == STATE_VAL.CAM_FILE_PLAY_PAUSE2)))
             {
-                CameraArray[1].Enabled = false;
                 ReleaseImageBuffer2();
                 tbPlay.Value = 0;
                 //MakeLUT();
@@ -1625,8 +1623,7 @@ namespace A_Scout_Viewer
             }
 
             if ((CameraArray[2].Checked == true) && ((m_Cam3State == STATE_VAL.CAM_OPENED) || (m_Cam3State == STATE_VAL.CAM_FILE_PLAY_PAUSE) || (m_Cam3State == STATE_VAL.CAM_FILE_PLAY_PAUSE2)))
-            {
-                CameraArray[2].Enabled = false;
+            {                
                 ReleaseImageBuffer3();
                 tbPlay.Value = 0;
                 //MakeLUT();
@@ -1652,6 +1649,10 @@ namespace A_Scout_Viewer
                     m_Cam3State = STATE_VAL.CAM_PREVIEW;
                     TileState.Text = "Camera State : \r" + "Live View";
                 }
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                CameraArray[i].Enabled = false;
             }
         }
 
@@ -3432,12 +3433,20 @@ namespace A_Scout_Viewer
         {
             if(metroCBCam1.Checked == true)
             {
+                if(m_EnalbeCamCount < 3)
+                {
+                    m_EnalbeCamCount++;
+                }                
                 InitializeContents(0);
                 ThreadCallbackStart1();
             }
             else
             {
                 ThreadStop1();
+                if (m_EnalbeCamCount > 0)
+                {
+                    m_EnalbeCamCount--;
+                }
             }
         }
 
@@ -3445,12 +3454,20 @@ namespace A_Scout_Viewer
         {
             if (metroCBCam2.Checked == true)
             {
+                if (m_EnalbeCamCount < 3)
+                {
+                    m_EnalbeCamCount++;
+                }
                 InitializeContents(1);
                 ThreadCallbackStart2();
             }
             else
             {
                 ThreadStop2();
+                if (m_EnalbeCamCount > 0)
+                {
+                    m_EnalbeCamCount--;
+                }
             }
         }
 
@@ -3458,12 +3475,20 @@ namespace A_Scout_Viewer
         {
             if (metroCBCam3.Checked == true)
             {
+                if (m_EnalbeCamCount < 3)
+                {
+                    m_EnalbeCamCount++;
+                }
                 InitializeContents(2);
                 ThreadCallbackStart3();
             }
             else
             {
                 ThreadStop3();
+                if (m_EnalbeCamCount > 0)
+                {
+                    m_EnalbeCamCount--;
+                }
             }
         }      
     }
