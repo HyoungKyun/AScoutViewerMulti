@@ -278,6 +278,7 @@ namespace A_Scout_Viewer
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
             // 
             // tgFocusMode
             // 
@@ -337,6 +338,7 @@ namespace A_Scout_Viewer
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
             // 
             // pictureBox3
             // 
@@ -347,6 +349,7 @@ namespace A_Scout_Viewer
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
             // 
             // groupBox1
             // 

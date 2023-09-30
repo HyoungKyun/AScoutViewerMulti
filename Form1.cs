@@ -148,6 +148,14 @@ namespace A_Scout_Viewer
         private MetroCheckBox[] CameraArray;
         private int m_EnalbeCamCount = 0;
 
+        private bool isZoomed = false;
+        private System.Drawing.Size originalSize1;
+        private System.Drawing.Size originalSize2;
+        private System.Drawing.Size originalSize3;
+        private System.Drawing.Point originalLocation1;
+        private System.Drawing.Point originalLocation2;
+        private System.Drawing.Point originalLocation3;
+
         private static cbOutputExdelegate Cam1Callback;
         static void Cam1CallbackFunc(IntPtr pData, ref MV_FRAME_OUT_INFO_EX pFrameInfo, IntPtr pUser)
         {
@@ -265,7 +273,13 @@ namespace A_Scout_Viewer
             if (m_nValidCamNum > 0)
             {                
                 MemoryInitialize();
-            }            
+            }
+            originalSize1 = pictureBox1.Size;
+            originalSize2 = pictureBox2.Size;
+            originalSize3 = pictureBox3.Size;
+            originalLocation1 = pictureBox1.Location;
+            originalLocation2 = pictureBox2.Location;
+            originalLocation3 = pictureBox3.Location;
         }
 
         private void InitializeCameraCheckBox()
@@ -743,12 +757,13 @@ namespace A_Scout_Viewer
                                 {
                                     m_Cam1State = STATE_VAL.CAM_IDLE;
                                 }
-
+                                
                                 TileState.Invoke(new Action(() =>
                                 {
                                     tbPlay.Value = m_Cam1SaveCount - 1;
                                     TileState.Text = "Play End";
                                     btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Play;
+                                    pictureBox_DoubleClick(pictureBox1, EventArgs.Empty);
                                 }));
                             }
                         }
@@ -1395,7 +1410,7 @@ namespace A_Scout_Viewer
 
             if(m_bFocusMode == true)
             {
-                FocusTest(m_pDisplayImage1);
+                FocusTest(m_pDisplayImage1);                
             }
 
             Bitmap bitmap = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(m_pDisplayImage1);
@@ -1414,7 +1429,7 @@ namespace A_Scout_Viewer
 
             if (m_bFocusMode == true)
             {
-                FocusTest(m_pDisplayImage2);
+                FocusTest(m_pDisplayImage2);                
             }
 
             Bitmap bitmap = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(m_pDisplayImage2);
@@ -1431,8 +1446,8 @@ namespace A_Scout_Viewer
             Cv2.CvtColor(m_pOriginalImage3, m_pDisplayImage3, ColorConversionCodes.BayerGR2BGR);
 
             if (m_bFocusMode == true)
-            {
-                FocusTest(m_pDisplayImage3);
+            {                
+                FocusTest(m_pDisplayImage3);                
             }
 
             Bitmap bitmap = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(m_pDisplayImage3);
@@ -1683,6 +1698,13 @@ namespace A_Scout_Viewer
                     TileState.Text = "Camera State : \r" + "Camera Ready";
                 }
             }
+            else
+            {
+                if (m_MyCamera1 != null)
+                {
+                    CameraArray[0].Enabled = true;
+                }
+            }
 
             if (CameraArray[1].Checked == true)
             {
@@ -1702,6 +1724,13 @@ namespace A_Scout_Viewer
                     TileState.Text = "Camera State : \r" + "Camera Ready";
                 }
             }
+            else
+            {
+                if(m_MyCamera2 != null)
+                {
+                    CameraArray[1].Enabled = true;
+                }
+            }
 
             if (CameraArray[2].Checked == true)
             {
@@ -1719,6 +1748,13 @@ namespace A_Scout_Viewer
                     }
                     m_Cam3State = STATE_VAL.CAM_OPENED;
                     TileState.Text = "Camera State : \r" + "Camera Ready";
+                }
+            }
+            else
+            {
+                if (m_MyCamera3 != null)
+                {
+                    CameraArray[2].Enabled = true;
                 }
             }
         }
@@ -3276,8 +3312,18 @@ namespace A_Scout_Viewer
 
         private void tgFocusMode_CheckedChanged(object sender, EventArgs e)
         {
-            m_FocusValue = 0;
-            m_bFocusMode = tgFocusMode.Checked;
+            if((m_EnalbeCamCount != 1) && (tgFocusMode.Checked == true))
+            {
+                m_bFocusMode = false;
+                tgFocusMode.Checked = false;
+                string errorMessage = "Focus Mode is available when one camera is selected.";
+                MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+            }
+            else
+            {
+                m_FocusValue = 0;
+                m_bFocusMode = tgFocusMode.Checked;
+            }            
         }
 
         public int CalculateSumModifiedLaplacian(Mat mat, int nXStart, int nYStart, int nWidth, int nHeight)
@@ -3395,6 +3441,8 @@ namespace A_Scout_Viewer
                     return;
                 }
 
+                pictureBox_DoubleClick(pictureBox1, EventArgs.Empty);
+
                 m_bCaptureFlag1 = true;
                 m_bCaptureFlag2 = true;
                 m_Cam1SaveCount = video_file.FrameCount;
@@ -3490,7 +3538,45 @@ namespace A_Scout_Viewer
                     m_EnalbeCamCount--;
                 }
             }
-        }      
+        }
+            
+        private void pictureBox_DoubleClick(object sender, EventArgs e)
+        {
+            PictureBox clickedPictureBox = sender as PictureBox;
+            if (clickedPictureBox != null)
+            {
+                if (!isZoomed)
+                {
+                    // 모든 PictureBox를 숨깁니다.
+                    pictureBox1.Visible = false;
+                    pictureBox2.Visible = false;
+                    pictureBox3.Visible = false;
+
+                    // 클릭된 PictureBox만 크게 표시합니다.
+                    clickedPictureBox.Visible = true;
+                    clickedPictureBox.Location = new System.Drawing.Point(originalLocation1.X, originalLocation1.Y);
+                    clickedPictureBox.Size = new System.Drawing.Size(originalSize1.Width*2, originalSize1.Height*2);                    
+                    isZoomed = true;
+                }
+                else
+                {
+                    // 모든 PictureBox의 원래 크기와 위치를 복원합니다.
+                    pictureBox1.Visible = true;
+                    pictureBox1.Size = originalSize1;
+                    pictureBox1.Location = originalLocation1;
+
+                    pictureBox2.Visible = true;
+                    pictureBox2.Size = originalSize2;
+                    pictureBox2.Location = originalLocation2;
+
+                    pictureBox3.Visible = true;
+                    pictureBox3.Size = originalSize3;
+                    pictureBox3.Location = originalLocation3;
+
+                    isZoomed = false;
+                }
+            }
+        }       
     }
 
     public static class Constants
