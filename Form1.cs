@@ -599,6 +599,7 @@ namespace A_Scout_Viewer
                                 m_Cam1State = STATE_VAL.CAM_OPENED;
                                 TileState.Invoke(new Action(() =>
                                 {
+                                    lbFPS.Text = "Cam1 FPS : ";
                                     TileState.Text = "Recording complete";
                                 }));
                             }                           
@@ -838,6 +839,7 @@ namespace A_Scout_Viewer
                                 m_Cam2State = STATE_VAL.CAM_OPENED;
                                 TileState.Invoke(new Action(() =>
                                 {
+                                    lbFPS2.Text = "Cam2 FPS : ";
                                     TileState.Text = "Recording complete";
                                 }));
                             }
@@ -1095,6 +1097,7 @@ namespace A_Scout_Viewer
                                 m_Cam2State = STATE_VAL.CAM_OPENED;
                                 TileState.Invoke(new Action(() =>
                                 {
+                                    lbFPS3.Text = "Cam3 FPS : ";
                                     TileState.Text = "Recording complete";
                                 }));
                             }
@@ -1667,7 +1670,7 @@ namespace A_Scout_Viewer
                 tgFocusMode.Checked = false;
                 tgFocusMode.Enabled = false;
                 GrabInfoTimer1.Stop();
-
+                lbFPS.Text = "Cam1 FPS : ";
                 if (m_MyCamera1 != null)
                 {
                     nRet = m_MyCamera1.StopGrabbing();
@@ -1686,7 +1689,7 @@ namespace A_Scout_Viewer
                 tgFocusMode.Checked = false;
                 tgFocusMode.Enabled = false;
                 GrabInfoTimer2.Stop();
-
+                lbFPS2.Text = "Cam2 FPS : ";
                 if (m_MyCamera2 != null)
                 {
                     nRet = m_MyCamera2.StopGrabbing();
@@ -1705,7 +1708,7 @@ namespace A_Scout_Viewer
                 tgFocusMode.Checked = false;
                 tgFocusMode.Enabled = false;
                 GrabInfoTimer3.Stop();
-
+                lbFPS3.Text = "Cam3 FPS : ";
                 if (m_MyCamera3 != null)
                 {
                     nRet = m_MyCamera3.StopGrabbing();
