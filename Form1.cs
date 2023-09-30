@@ -2138,12 +2138,41 @@ namespace A_Scout_Viewer
 
                 if (CameraArray[2].Checked == true)
                 {
-                    m_Cam2State = STATE_VAL.CAM_PLAY_PAUSE;
+                    m_Cam3State = STATE_VAL.CAM_PLAY_PAUSE;
                 }
 
                 TileState.Text = "Pause";
                 btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Play;                              
-            }           
+            }
+            else if (m_Cam1State == STATE_VAL.CAM_FILE_PLAY)
+            {
+                //PlayProgressTimer.Stop();
+                m_Cam1State = STATE_VAL.CAM_FILE_PLAY_PAUSE;
+                TileState.Text = "Pause";
+                btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Play;
+            }
+            else if ((m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE) || (m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE2))
+            {
+                if (!video_file.IsOpened())
+                {
+                    MessageBox.Show("File Open Error");
+
+                    if (m_MyCamera1 != null)
+                    {
+                        m_Cam1State = STATE_VAL.CAM_OPENED;
+                    }
+                    else
+                    {
+                        m_Cam1State = STATE_VAL.CAM_IDLE;
+                    }
+                    tbPlay.Value = 0;
+                    return;
+                }
+
+                m_Cam1State = STATE_VAL.CAM_FILE_PLAY;
+                TileState.Text = "Play ";
+                btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Stop;
+            }
             else if((m_Cam1State == STATE_VAL.CAM_PLAY_PAUSE)|| (m_Cam1State == STATE_VAL.CAM_OPENED)|| (m_Cam2State == STATE_VAL.CAM_PLAY_PAUSE) || (m_Cam2State == STATE_VAL.CAM_OPENED) || (m_Cam3State == STATE_VAL.CAM_PLAY_PAUSE) || (m_Cam3State == STATE_VAL.CAM_OPENED))
             {                                
                 nSpeed = cbPlaySpeed.SelectedIndex;
@@ -2185,35 +2214,7 @@ namespace A_Scout_Viewer
                 TileState.Text = "Play";
                 btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Stop;
             }
-            else if (m_Cam1State == STATE_VAL.CAM_FILE_PLAY)
-            {
-                //PlayProgressTimer.Stop();
-                m_Cam1State = STATE_VAL.CAM_FILE_PLAY_PAUSE;
-                TileState.Text = "Pause";
-                btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Play;
-            }
-            else if ((m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE) || (m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE2))
-            {
-                if (!video_file.IsOpened())
-                {
-                    MessageBox.Show("File Open Error");
-
-                    if (m_MyCamera1 != null)
-                    {
-                        m_Cam1State = STATE_VAL.CAM_OPENED;
-                    }
-                    else 
-                    {
-                        m_Cam1State = STATE_VAL.CAM_IDLE;
-                    }
-                    tbPlay.Value = 0;
-                    return;
-                }  
-                               
-                m_Cam1State = STATE_VAL.CAM_FILE_PLAY;
-                TileState.Text = "Play ";
-                btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Stop;
-            }            
+            
         }
 
         private void tbPlay_Scroll(object sender, ScrollEventArgs e)
@@ -3441,6 +3442,10 @@ namespace A_Scout_Viewer
                     return;
                 }
 
+                if(isZoomed == true)
+                {
+                    isZoomed = false;
+                }
                 pictureBox_DoubleClick(pictureBox1, EventArgs.Empty);
 
                 m_bCaptureFlag1 = true;
@@ -3469,7 +3474,7 @@ namespace A_Scout_Viewer
                 }
                 else
                 {
-                    m_Cam2State = STATE_VAL.CAM_FILE_PLAY;
+                    m_Cam1State = STATE_VAL.CAM_FILE_PLAY;
                 }
                 
                 TileState.Text = "Play File";
