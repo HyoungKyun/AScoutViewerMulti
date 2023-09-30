@@ -592,14 +592,12 @@ namespace A_Scout_Viewer
                         if ((m_Cam1State == STATE_VAL.CAM_IDLE) || (m_Cam1State == STATE_VAL.CAM_SAVE_DONE))
                         {
                             GrabInfoTimer1.Stop();
-
                             if (m_MyCamera1 != null)
                             {
                                 m_MyCamera1.StopGrabbing();
                                 m_Cam1State = STATE_VAL.CAM_OPENED;
                                 TileState.Invoke(new Action(() =>
                                 {
-                                    lbFPS.Text = "Cam1 FPS : ";
                                     TileState.Text = "Recording complete";
                                 }));
                             }                           
@@ -838,8 +836,7 @@ namespace A_Scout_Viewer
                                 m_MyCamera2.StopGrabbing();
                                 m_Cam2State = STATE_VAL.CAM_OPENED;
                                 TileState.Invoke(new Action(() =>
-                                {
-                                    lbFPS2.Text = "Cam2 FPS : ";
+                                {                                    
                                     TileState.Text = "Recording complete";
                                 }));
                             }
@@ -1094,10 +1091,9 @@ namespace A_Scout_Viewer
                             if (m_MyCamera3 != null)
                             {
                                 m_MyCamera3.StopGrabbing();
-                                m_Cam2State = STATE_VAL.CAM_OPENED;
+                                m_Cam3State = STATE_VAL.CAM_OPENED;
                                 TileState.Invoke(new Action(() =>
-                                {
-                                    lbFPS3.Text = "Cam3 FPS : ";
+                                {                                    
                                     TileState.Text = "Recording complete";
                                 }));
                             }
