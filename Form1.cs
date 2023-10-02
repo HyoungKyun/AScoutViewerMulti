@@ -732,6 +732,7 @@ namespace A_Scout_Viewer
                             else
                             {
                                 m_nSaveIndex1 = m_Cam1SaveCount - 1;
+                                video_file.PosFrames = m_nSaveIndex1;
                                 video_file.Read(m_pDisplayImage1);
                                 m_LastDisplayIndex1 = m_nSaveIndex1;
                                 Bitmap bitmap2 = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(m_pDisplayImage1);
@@ -1587,7 +1588,7 @@ namespace A_Scout_Viewer
 
                 // 타이머 생성 및 설정
                 GrabInfoTimer1 = new System.Windows.Forms.Timer();
-                GrabInfoTimer1.Interval = 2000;
+                GrabInfoTimer1.Interval = 3000;
                 GrabInfoTimer1.Tick += Timer_Tick;
                 m_nFrameCount = 0;               
 
@@ -1616,7 +1617,7 @@ namespace A_Scout_Viewer
 
                 // 타이머 생성 및 설정
                 GrabInfoTimer2 = new System.Windows.Forms.Timer();
-                GrabInfoTimer2.Interval = 2000;
+                GrabInfoTimer2.Interval = 3000;
                 GrabInfoTimer2.Tick += Timer_Tick2;
                 m_nFrameCount2 = 0;
                 
@@ -1645,7 +1646,7 @@ namespace A_Scout_Viewer
 
                 // 타이머 생성 및 설정
                 GrabInfoTimer3 = new System.Windows.Forms.Timer();
-                GrabInfoTimer3.Interval = 2000;
+                GrabInfoTimer3.Interval = 3000;
                 GrabInfoTimer3.Tick += Timer_Tick3;
                 m_nFrameCount3 = 0;
 
@@ -2236,6 +2237,17 @@ namespace A_Scout_Viewer
                 }
                 btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Play;
             }
+            else if (m_Cam1State == STATE_VAL.CAM_FILE_PLAY)
+            {
+                m_Cam1State = STATE_VAL.CAM_FILE_PLAY_PAUSE;
+                btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Play;
+            }
+            else if ((m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE) || (m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE2))
+            {
+                m_nSaveIndex1 = tbPlay.Value;
+                m_Cam1State = STATE_VAL.CAM_FILE_PLAY_PAUSE;
+                TileState.Text = "Pause";
+            }
             else if ((((m_Cam1State == STATE_VAL.CAM_OPENED) || (m_Cam1State == STATE_VAL.CAM_IDLE)) && m_bCaptureFlag1)|| (((m_Cam2State == STATE_VAL.CAM_OPENED) || (m_Cam2State == STATE_VAL.CAM_IDLE)) && m_bCaptureFlag2) || (((m_Cam1State == STATE_VAL.CAM_OPENED) || (m_Cam1State == STATE_VAL.CAM_IDLE)) && m_bCaptureFlag3))
             {
                 if (CameraArray[0].Checked == true)
@@ -2255,17 +2267,7 @@ namespace A_Scout_Viewer
                 }
                 TileState.Text = "Pause";
             }
-            else if (m_Cam1State == STATE_VAL.CAM_FILE_PLAY)
-            {
-                m_Cam1State = STATE_VAL.CAM_FILE_PLAY_PAUSE;
-                btPlayMini.BackgroundImage = A_Scout_Viewer.Properties.Resources.Play;
-            }
-            else if ((m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE) || (m_Cam1State == STATE_VAL.CAM_FILE_PLAY_PAUSE2))
-            {
-                m_nSaveIndex1 = tbPlay.Value;
-                m_Cam1State = STATE_VAL.CAM_FILE_PLAY_PAUSE;
-                TileState.Text = "Pause";
-            }            
+            
         }
 
         private void GetFrameRate(int Index)
